@@ -48,6 +48,5 @@ gem 'pg'
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
 group :production do
-
   gem 'rails_12factor'
 end
