@@ -47,4 +47,5 @@ end
 
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
+gem 'rails_12factor', group: :productio
 
