@@ -1,0 +1,45 @@
+
+<p id="notice"><%= notice %></p>
+
+<div align="right">
+  <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
+</div>
+
+<h1 align="center"> School Address</h1>
+
+<br/>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>Address Line 3</th>
+    <th>Pincode</th>
+    <th>Phone number 1</th>
+    <th>Phone number 2</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Edit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @addresses.each do |address| %>
+      <tr>
+        <td><%=address.address_line1 %></td>
+        <td><%=address.address_line2 %></td>
+        <td><%=address.address_line3 %></td>
+        <td><%=address.pincode %></td>
+        <td><%=address.ph_num1 %></td>
+        <td><%=address.ph_num2 %></td>
+        <td><%=address.start_time.strftime('%r') %></td>
+        <td><%=address.end_time.strftime('%r') %></td>
+        <td><%= link_to 'Edit', edit_address_path(address) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<div align="center">
+  <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
+</div>
+

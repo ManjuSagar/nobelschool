@@ -1,0 +1,119 @@
+<h2>Log in</h2>
+<html>
+<body>
+<div id="view_area">
+  <div class="signpanel">
+    <!--<p class="notice"><%#= notice %></p>-->
+
+    <div class="panel-heading">
+      <!--<img src="/images/GroupCBF_Logo.jpg"></img>-->
+      <h2>Welcome! Please signin.</h2>
+    </div>
+
+
+    <div class="panel-body">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+            <p></p>
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
+      <% end %>
+      <div>
+        <%#= button_to 'Forgot password?', new_password_reset_path, :method => :get %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<style>
+
+  html, body {
+    height: 100%;
+  }
+
+  #view_area {
+    height: 90%;
+  }
+
+  footer div {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form#new_admin_user .actions {
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+  }
+  form#new_admin_user input {
+    margin-bottom: 6px;
+  }
+
+  form#new_admin_user {
+    margin-left: 4px;
+  }
+
+  body {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+  }
+  .signpanel {
+    background-color: #e1f5ff;
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    height: 350px ;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .signpanel .panel-heading img {
+    /*width: 100%;*/
+    /*height: 100px;*/
+  }
+  .signpanel  .panel-body {
+    min-height: 350px;
+  }
+  .signpanel input {
+    width: 69%;
+    height: 30px;
+    padding-left: 4px;
+  }
+  .signpanel input[type='submit'] {
+    color: #ffbf41;
+    background-color: #2574ab;
+    border: 0px;
+    width: 71%;
+    height: 36px;
+  }
+  .alert {
+    color: red;
+  }
+  .forgot_password {
+    margin-left: 2px;
+  }
+
+  input {
+    border: 4px;
+    border-color: black;
+  }
+
+</style>
+
+

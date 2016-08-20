@@ -1,0 +1,1 @@
+json.partial! "galleries/gallary", gallary: @gallary

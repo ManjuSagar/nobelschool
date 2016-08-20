@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<div align="right">
+  <%= link_to 'Go to Website', root_path,:class=>"btn btn-primary"%>
+<%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
+</div>
+<h1 class="text-center">Listing Photos</h1><br/>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Image Type</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gallaries.each do |gallary| %>
+      <tr>
+        <td><%= image_tag gallary.image.url, :width=> '150px', height:'150px'%></td>
+        <td><%= gallary.image_type %></td>
+        <td><%= link_to 'Edit', edit_gallary_path(gallary) %></td>
+        <td><%= link_to 'Destroy', gallary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div align="center">
+<%= link_to 'Add New Photo', new_gallary_path,:class=>"btn btn-primary"%>
+<%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
+</div>

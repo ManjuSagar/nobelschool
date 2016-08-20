@@ -1,0 +1,412 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Noble English School</title>
+  <!--<link rel="stylesheet" href="css/example.css">-->
+  <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+  <!-- End CSS for slidesjs.com example -->
+
+  <!-- SlidesJS Optional: If you'd like to use this design -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top:70px;
+    }
+
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: image-url('btns-next-prev.png');
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: image-url('pagination.png');
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container1 {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container1 {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container1 {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container1 {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container1 {
+        width: 1170px
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
+  <style type="text/css">
+    <!--
+    body {
+      font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+      background-color: #42413C;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+    /* ~~ Element/tag selectors ~~ */
+    ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+      padding: 0;
+      margin: 0;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+      margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+      padding-right: 15px;
+      padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+    }
+    a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+      border: none;
+    }
+    /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+    a:link {
+      color: #42413C;
+      /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+    }
+    a:visited {
+      color: #6E6C64;
+      text-decoration: underline;
+    }
+    a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+      text-decoration: none;
+    }
+    /* ~~ This fixed width container surrounds all other blocks ~~ */
+    .container1 {
+      width: 960px;
+      background-color: #FFFFFF;
+      margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+    }
+    /* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+    header {
+      background-color: #ADB96E;
+    }
+    /* ~~ These are the columns for the layout. ~~
+
+    1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
+
+    2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+    3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+    4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
+
+    */
+    .sidebar1 {
+      float: right;
+      width: 180px;
+      background-color: #EADCAE;
+      padding-bottom: 10px;
+    }
+    .content {
+      padding: 10px 0;
+      width: 780px;
+      float: right;
+    }
+
+    /* ~~ This grouped selector gives the lists in the .content area space ~~ */
+    .content ul, .content ol {
+      padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+    }
+
+    /* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+    ul.nav {
+      list-style: none; /* this removes the list marker */
+      border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+      margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+    }
+    ul.nav li {
+      border-bottom: 1px solid #666; /* this creates the button separation */
+    }
+    ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+      padding: 5px 5px 5px 15px;
+      display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+      width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+      text-decoration: none;
+      background-color: #C6D580;
+    }
+    ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+      background-color: #ADB96E;
+      color: #FFF;
+    }
+
+    /* ~~ The footer ~~ */
+    footer {
+      padding: 10px 0;
+      background-color: #CCC49F;
+      position: relative;/* this gives IE6 hasLayout to properly clear */
+      clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+    }
+
+    /*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+    header, section, footer, aside, article, figure {
+      display: block;
+    }
+    -->
+    #menu {
+      height: 50px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #FF6600;
+      overflow: hidden;
+      float: inherit !important;
+    }
+    .link{
+      padding: 8px 20px 5px;
+      color: #fbefe8;
+      font-family: Arial;
+      font-size: 26px;
+      text-decoration: none;
+      font-variant: normal;
+      font-weight: bold;
+    }
+  </style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+  <style>
+    body{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: "Century Gothic", sans-serif;
+      font-size: 90%;
+    }
+    #wrapper{
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h2{
+      margin: 100px 0px 10px 0px;
+    }
+    #header{
+      margin-bottom: 5px;
+    }
+    #author{
+      margin: 5px 0px 50px 0px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #bdbdbd;
+    }
+    #footer{
+      margin: 150px 0px 100px 0px;
+    }
+    .tales {
+      width: 100%;
+    }
+    .carousel-inner{
+      width:100%;
+      max-height: 543px !important;
+    }
+    footer p {
+      font-size: 21px !important;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container1">
+  <div id="menu">
+    <a href="/" class="link"><font color="white" style="font-style: oblique">Home</font></a>
+    <a href="/about_us" class="link"><font color="white" style="font-style: oblique">About Us</font></a>
+    <a href="/teachers" class="link"><font color="white" style="font-style: oblique">Our Staff</font></a>
+    <a href="/photos" class="link"><font color="white" style="font-style: oblique">Gallery</font></a>
+    <a href="/facilities" class="link"><font color="white" style="font-style: oblique">Facilities</font></a>
+    <a href="/contact" class="link"><font color="white" style="font-style: oblique">Contact Us</font></a>
+
+  </div>
+  <!-- SlidesJS Required: Start Slides -->
+  <!-- The container is used to define the width of the slideshow -->
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <%  @gallary.each_with_index do |g, index| %>
+        <% if index == 0 %>
+              <li data-target="#myCarousel" data-slide-to="<%=index%>" class="active"></li>
+        <% else %>
+             <li data-target="#myCarousel" data-slide-to="<%=index%>"></li>
+      <%end %>
+          <% end %>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @gallary.each_with_index do |g, index| %>
+          <% if index == 0 %>
+            <div class="item active">
+            <%= image_tag g.image.url, :style=>"width:1000px;height:550px;", :alt=>"Rails"%>
+          </div>
+              <% else %>
+              <div class="item">
+                <%= image_tag g.image.url, :style=>"width:1000px;height:550px;", :alt=>"Rails"%>
+              </div>
+      <% end %>
+      <% end %>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <footer>
+    <p>  <span><%= link_to 'Login', index_path%></span>  <span style="margin-left: 200px"> Copyright © www.nobleenglishschool.com </span></p>
+  </footer>
+
+  <!-- end .container --></div>
+
+<!-- SlidesJS Required: Link to jQuery -->
+<!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Link to jquery.slides.js -->
+<!--<script src="js/jquery.slides.min.js"></script>-->
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+  $('#myCarousel').carousel({
+    interval: 3000,
+    cycle: true
+  });
+</script>
+<!-- End SlidesJS Required -->
+
+
+</body></html>

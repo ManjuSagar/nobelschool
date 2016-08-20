@@ -1,0 +1,1 @@
+json.array! @gallaries, partial: 'galleries/gallary', as: :gallary
