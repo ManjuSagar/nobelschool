@@ -4,7 +4,9 @@ class GallariesController < ApplicationController
   # GET /galleries
   # GET /galleries.json
   def index
-    @gallaries = Gallary.all
+    @gallaries = Gallary.all.where(:image_type=> "Home Page")
+
+    @gallary = Gallary.all.where(:image_type=> "Gallary")
   end
 
   # GET /galleries/1
@@ -69,6 +71,6 @@ class GallariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gallary_params
-      params.require(:gallary).permit!
+      params.require(:gallary).permit(:title, :image_type, :image)
     end
 end

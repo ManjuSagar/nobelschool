@@ -46,7 +46,10 @@ group :development do
 end
 gem 'pg'
 gem 'devise'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip"
 group :production do
   gem 'rails_12factor'
 end
+gem 'carrierwave'
+
+gem 'cloudinary'
