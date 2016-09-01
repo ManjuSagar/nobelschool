@@ -1,0 +1,1 @@
+json.partial! "copy_rights/copy_right", copy_right: @copy_right

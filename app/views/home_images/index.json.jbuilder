@@ -1,0 +1,1 @@
+json.array! @home_images, partial: 'home_images/home_image', as: :home_image

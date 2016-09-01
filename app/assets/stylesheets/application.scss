@@ -17,3 +17,32 @@
  *= require_tree .
  *= require_self
  */
+
+
+.btn-xlarge {
+  padding: 18px 28px;
+  font-size: 22px; //change this to your desired size
+  line-height: normal;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.admin_panel{
+  background-image: image-url('school.jpg');
+  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.admin-info {
+  background: #303038;
+  opacity: 0.9;
+  color: white;
+}
+.top-margin{
+  margin-top: 150px;
+}
+.alert-warning li {
+  color: black !important;
+}

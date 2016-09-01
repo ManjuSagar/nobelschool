@@ -4,7 +4,7 @@
 <div align="right">
   <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
 </div>
-
+<div class="admin-info">
 <h1 align="center"> School Address</h1>
 
 <br/>
@@ -20,6 +20,7 @@
     <th>Phone number 2</th>
     <th>Start Time</th>
     <th>End Time</th>
+    <th>Email</th>
     <th>Edit</th>
   </tr>
   </thead>
@@ -34,11 +35,12 @@
         <td><%=address.ph_num2 %></td>
         <td><%=address.start_time.strftime('%r') %></td>
         <td><%=address.end_time.strftime('%r') %></td>
-        <td><%= link_to 'Edit', edit_address_path(address) %></td>
+        <td><%=address.email %></td>
+        <td><%= link_to 'Edit', edit_address_path(address), :class=> 'btn btn-default' %></td>
       </tr>
   <% end %>
   </tbody>
-</table>
+</table></div>
 <div align="center">
   <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
 </div>

@@ -1,5 +1,5 @@
 class NobelController < ApplicationController
-
+  layout 'admin', only:[:index]
   def home
     @gallary = Gallary.all.where(:image_type=> "Home Page")
   end

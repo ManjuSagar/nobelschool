@@ -4,7 +4,7 @@
   <%= link_to 'Go to Website', root_path,:class=>"btn btn-primary"%>
   <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
 </div>
-
+<div class="admin-info">
 <h1 class="text-center">Listing Staffs</h1>
 
  <br/>
@@ -15,6 +15,8 @@
     <th>#</th>
     <th>Name</th>
     <th>Education</th>
+    <th>Experience</th>
+    <th>Specilization</th>
     <th>Edit</th>
     <th>Destroy</th>
   </tr>
@@ -24,13 +26,15 @@
        <tr><td><%=index+1 %></td>
        <td><%=s.name %></td>
        <td><%=s.education %></td>
-      <td><%= link_to 'Edit', edit_staff_path(id: s.id) %></td>
-      <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <td><%=s.experience %></td>
+       <td><%=s.specilizaton %></td>
+      <td><%= link_to 'Edit', edit_staff_path(id: s.id), :class=> 'btn btn-default' %></td>
+      <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-default' %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
-
+</div>
 <div align="center">
 <%= link_to 'New Staff', new_staff_path ,:class=>"btn btn-primary"%>
 <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>

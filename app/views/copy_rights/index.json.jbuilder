@@ -1,0 +1,1 @@
+json.array! @copy_rights, partial: 'copy_rights/copy_right', as: :copy_right
