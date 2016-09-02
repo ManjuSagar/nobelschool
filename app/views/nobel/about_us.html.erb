@@ -158,9 +158,11 @@
     <h2 style="color:blue;">Welcome to Noble English High School</h2>
   <% info = @about.school_info.split(/\r\n/)%>
     <% info.each do |i|%>
-    <p><%= i%></p>
+        <% if i.length >  0 %>
+    <p><%= i%></p> 
+            <% end %>
     <% end %>
-    <!-- end .content --></article>
+  </article>
   <footer>
     <p>  <span><%= link_to 'Login', index_path%></span>  <span style="margin-left: 200px"> Copyright © <%= CopyRight.last.copy_right_title%> </span></p>
   </footer>
