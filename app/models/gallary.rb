@@ -24,11 +24,9 @@ class Gallary < ActiveRecord::Base
   attr_accessor :title, :bytes, :image, :image_cache, :image_type
   mount_uploader :image, ImageUploader
 
-  validates_presence_of :title, :image, :image_type
+  validates_presence_of :title, :image
 
   def update_gallary_detail
-    puts "selddddddddddddddddddddddddddddddd  ddddddddddddd #{title}"
-    puts "selddddddddddddddddddddddddddddddd  ddddddddddddd #{image_type}"
     self.update_column(:image_type, image_type)
     self.update_column(:title, title)
   end

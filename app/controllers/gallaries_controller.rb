@@ -4,9 +4,7 @@ class GallariesController < ApplicationController
   # GET /galleries
   # GET /galleries.json
   def index
-    @gallaries = Gallary.all.where(:image_type=> "Home Page")
-
-    @gallary = Gallary.all.where(:image_type=> "Gallary")
+    @gallary = Gallary.all
   end
 
   # GET /galleries/1

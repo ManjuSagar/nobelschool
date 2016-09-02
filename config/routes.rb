@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :abouts
+  resources :copy_rights
+  resources :facilities
+  resources :abouts
+  resources :home_images
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,7 +16,7 @@ Rails.application.routes.draw do
   get '/about_us' => 'nobel#about_us'
   get '/teachers' => 'nobel#teachers'
   get '/photos' => 'nobel#gallary'
-  get '/facilities' => 'nobel#facilities'
+  get '/school_facilities' => 'nobel#facilities'
   get '/contact' => 'nobel#contact_us'
   get '/index' => 'nobel#index'
 

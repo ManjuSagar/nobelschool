@@ -19,7 +19,7 @@
   <% @facilities.each do |gallary| %>
       <tr>
         <td><%= image_tag gallary.image.url, :width=> '150px', height:'150px'%></td>
-        <td><%= link_to 'Edit', edit_gallary_path(gallary), :class=> 'btn btn-default'%></td>
+        <td><%= link_to 'Edit', edit_facility_path(gallary), :class=> 'btn btn-default'%></td>
         <td><%= link_to 'Destroy', gallary, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-default' %></td>
       </tr>
   <% end %>
