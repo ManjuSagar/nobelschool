@@ -156,14 +156,7 @@
   </div>
   <article class="content">
     <h2 style="color:blue;">Welcome to Noble English High School</h2>
-    <!--<p>Noble high school was established in the year 1990 with a view of imparting of quality education and inculcating moral values to the students.</p>-->
-    <!--<p>We believe in encouraging the young minds of today to build as the strength of character alongside a strong educational background. The principles of value based education adapted by an institution helps in nurturing the students and enable them to develop as an all – round personality.</p>-->
-    <!--<p>We emphasize on the need for progressive learning and hand hold the children by giving them individual attention, regular evaluation of their progress, recognition of their abilities and talents by providing them a platform for learning and growth. We also encourage our students to participate in Co – curricular and extracurricular activities with an aim of helping them achieve a balanced growth.</p>-->
-    <!--<p>Our school is equipped with well – ventilated and spacious class rooms with good furniture, teaching aids, State of art computer labs, well stacked library standard play ground with good sports amenities. Our school faculty are highly qualified and experienced academicians with focus in discipline and good character. We have van facility from the school to all the surrounding areas.</p>-->
-    <!--<p>For details of admission Please <a href="contact.html">Contact Us</a>.</p>-->
-    <!--<p>Details about the School: Noble High School was founded in 1992- 93 by Noble Education Trust Registered. The main aim of the school is to provide a sound education of both mind and-->
-      <!--body and the development of character in every pupil. This is a Co –Education Institute. The school course begins from Nursery to Tenth (X) standard .We are very proud to announce that our school has been secured 100% Result from the 11years continuously.</p>-->
-     <% info = @about.school_info.split(".")%>
+  <% info = @about.school_info.split(/\r\n/)%>
     <% info.each do |i|%>
     <p><%= "#{i}."%></p>
     <% end %>
