@@ -6,3 +6,5 @@ Address.create(:address_line1=> 'Kottige Palya', :address_line2=> 'Magadi Main R
                :ph_num1=> '23285900', :ph_num2=> '9449152947', :email=> 'noblehighschoolblr@gmail.com')
 end
 CopyRight.create(:copy_right_title=> 'nobelenglishschool.com') unless CopyRight.find_by_copy_right_title('nobelenglishschool.com')
+
+About.create(:school_info=> 'Please add school info in admin login') unless About.count < 0
