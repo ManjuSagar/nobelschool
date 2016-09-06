@@ -6,7 +6,7 @@
 </div>
 <div class="admin-info">
 <h1 class="text-center">Listing Photos</h1><br/>
-<h1 class="text-center">  Home page Images</h1>
+<h1 class="text-center">  Home page Images</h1><br/>
 <table class="table table-bordered">
   <thead>
   <tr>
@@ -21,7 +21,7 @@
   <%  @home_images.each do |gallary| %>
       <tr>
         <td><%= image_tag gallary.image.url, :width=> '150px', height:'150px'%></td>
-        <td><%= link_to 'Edit', edit_gallary_path(gallary), :class=> 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_home_image_path(gallary), :class=> 'btn btn-default' %></td>
         <td><%= link_to 'Destroy', gallary, :class=> 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
@@ -32,6 +32,6 @@
 </div>
 <br>
 <div align="center">
-  <%= link_to 'Add New Photo', new_home_image_path,:class=>"btn btn-primary"%>
+  <%= link_to 'Add New Home Image', new_home_image_path,:class=>"btn btn-primary"%>
   <%= link_to 'Admin Home', index_path,:class=>"btn btn-primary"%>
 </div>

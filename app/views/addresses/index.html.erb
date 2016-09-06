@@ -1,4 +1,8 @@
-
+<style>
+  .form-group option{
+    color: black
+  }
+  </style>
 <p id="notice"><%= notice %></p>
 
 <div align="right">
@@ -26,14 +30,14 @@
   </thead>
   <tbody>
   <% @addresses.each do |address| %>
-      <tr>
+      <tr class="address-info">
         <td><%=address.address_line1 %></td>
         <td><%=address.address_line2 %></td>
         <td><%=address.address_line3 %></td>
         <td><%=address.pincode %></td>
         <td><%=address.ph_num1 %></td>
         <td><%=address.ph_num2 %></td>
-        <td><%=address.start_time.strftime('%r') %></td>
+        <td><%=address.start_time.strftime('%r')%></td>
         <td><%=address.end_time.strftime('%r') %></td>
         <td><%=address.email %></td>
         <td><%= link_to 'Edit', edit_address_path(address), :class=> 'btn btn-default' %></td>
