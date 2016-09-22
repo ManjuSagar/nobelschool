@@ -324,7 +324,7 @@
     }
     .carousel-inner{
       width:100%;
-      max-height: 543px !important;
+      /*max-height: 543px !important;*/
     }
     footer p {
       font-size: 21px !important;
@@ -363,11 +363,11 @@
       <% @gallary.each_with_index do |g, index| %>
           <% if index == 0 %>
             <div class="item active">
-            <%= image_tag g.image.url, :style=>"width:1000px;height:550px;", :alt=>"Rails"%>
+            <%= image_tag g.image.url, :style=>"width:1000px;height:auto;", :alt=>"Rails"%>
           </div>
               <% else %>
               <div class="item">
-                <%= image_tag g.image.url, :style=>"width:1000px;height:550px;", :alt=>"Rails"%>
+                <%= image_tag g.image.url, :style=>"width:1000px;height:auto;", :alt=>"Rails"%>
               </div>
       <% end %>
       <% end %>
